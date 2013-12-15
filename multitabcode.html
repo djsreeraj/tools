@@ -1,0 +1,265 @@
+
+the code used for multitab is : 
+
+<script type='text/javascript'>
+//<![CDATA[
+function InfoExpo_oom(IEID, id)
+{
+  var InfoExpo = document.getElementById(IEID);
+  var IEs = InfoExpo.firstChild;
+  while (IEs.className != "IEs" ) IEs = IEs.nextSibling;
+  var IE = IEs.firstChild;
+  var i   = 0;
+  do
+  {
+    if (IE.tagName == "A")
+    {
+      i++;
+      IE.href      = "javascript:InfoExpo_ubah('"+IEID+"', "+i+");";
+      IE.className = (i == id) ? "Active" : "";
+      IE.blur();
+    }
+  }
+  while (IE = IE.nextSibling);
+  var Sreerajm = InfoExpo.firstChild;
+  while (Sreerajm.className != 'Sreerajm') Sreerajm = Sreerajm.nextSibling;
+  var Sreeraj = Sreerajm.firstChild;
+  var i    = 0;
+  do
+  {
+    if (Sreeraj.className == 'Sreeraj')
+    {
+      i++;
+      if (Sreerajm.offsetHeight) Sreeraj.style.height = (Sreerajm.offsetHeight-2)+"px";
+      Sreeraj.style.overflow = "auto";
+      Sreeraj.style.display  = (i == id) ? 'block' : 'none';
+    }
+  }
+  while (Sreeraj = Sreeraj.nextSibling);
+}
+function InfoExpo_ubah(IEID, id) { InfoExpo_oom(IEID, id);
+}
+function InfoExpo_inisial(IEID) { InfoExpo_oom(IEID,  1);
+document.write('');}
+//]]>
+</script>
+
+<style>
+div.InfoExpo div.IEs {
+height: 24px;
+overflow: hidden;
+}
+div.InfoExpo div.IEs a:hover{
+background-color: #96DEF5;
+}
+
+
+
+ div.InfoExpo div.IEs a.Active {
+background-color: #17C6F6;
+}
+div.InfoExpo div.Sreerajm {
+clear: both;
+border: 2px solid #7BCF11;
+overflow: hidden;
+background-color: #ffffff;
+}
+div.InfoExpo div.Sreerajm div.Sreeraj {
+height: 100%; padding: 0px;
+overflow: hidden;
+}
+div.InfoExpo div.Sreerajm div.Sreeraj div.Dj {
+padding: 3px 5px;
+}
+div.InfoExpo div.IEs a {
+border-left:2px solid #7BCF11;
+border-right:2px solid #7BCF11;
+border-top:2px solid #7BCF11;
+border-boIEom:0px solid #7BCF11;
+float: left;
+display: block;
+width: 115px;
+text-align: center;
+vertical-align: middle;
+height: 24px;
+padding-top: 3px;
+text-decoration: none;
+font-family: "Arial", Serif;
+font-size: 11px;
+font-weight: 900;
+color: #4D4D4D
+}
+</style>
+
+<form action="InfoExpo.html" method="get">
+<div id="InfoExpo" class="InfoExpo">
+<div style="width: 760px;" class="IEs"> <a>General </a> <a>CS </a> <a>EC</a> <a>Mech</a><a>Civil</a><a>Electrical</a></div>
+<div style="width: 710px; height: 130px;" class="Sreerajm">
+
+
+<div class="Sreeraj">
+<div class="Dj">
+<br/>
+
+
+
+
+
+
+
+
+<table>
+
+<tr>
+
+
+
+
+
+
+<td class="s-boxx">
+<a href="http://books.google.com/">
+<img src="http://books.google.com/intl/en/images/logos/books_logo_lg.png" alt="Search Google Books" width="177" height="65"  Title="Click to Refer Any Text Book From Google Books" ></a><br/>
+ 
+
+
+
+
+</td>
+
+
+
+<td class="s-boxx">
+<a href="http://www.wikipedia.org">
+<img src="http://discowap.mobie.in/images/nmit/wikipedia1.png" alt="Wikipedia Free Encyclopedia" width="116" height="89"  Title="Click to Refer from Wikipedia 
+ Largest Online Encyclopedia"  ></a>
+
+ <br/>
+
+
+</td>
+
+
+<td class="s-boxx">
+<a href="http://www.britannica.com">
+<img src="http://discowap.mobie.in/images/nmit/encyclopaedia-britannica.jpg" alt="Britannica Encyclopedia" width="129" height="86"  Title="Click to Refer from
+ Britanica Online Encyclopedia" ></a><br/>
+
+
+</td>
+
+
+<td class="s-boxx">
+<a href="http://examvoice.com">
+<img src="http://discowap.mobie.in/images/nmit/logo.png" alt="Exam Voice Questions" width="222" height="62"  Title="Click to Refer from Exam Voice
+Huge Collection of Exam Resources"  ></a><br/>
+
+
+</td>
+</tr>
+
+</table>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+
+
+<div class="Sreeraj">
+<div class="Dj">
+<br/>
+
+
+
+Computer Science Engg References
+
+ 
+
+<br/><br/>
+<a class="" href="http://examvoice.com/browse/computer-science/">
+      ExamVoice
+    </a>  | 
+
+
+
+</div>
+</div>
+<div class="Sreeraj">
+<div class="Dj">
+<br/>
+Electronics and Communication Engg. References
+
+
+<br/><br/>
+<a class="" href="http://examvoice.com/browse/electronics/">
+      ExamVoice
+    </a>  | 
+
+
+</div>
+</div>
+<div class="Sreeraj">
+<div class="Dj">
+<br/>
+Mechanical Engg. References
+
+
+
+<br/><br/>
+<a class="" href="http://examvoice.com/search/?s=mechanical">
+      ExamVoice
+    </a>  | 
+
+
+</div>
+</div>
+
+<div class="Sreeraj">
+<div class="Dj">
+<br/>
+Civil Engg. References
+
+
+
+<br/><br/>
+<a class="" href="http://examvoice.com/search/?s=civil">
+      ExamVoice
+    </a>  | 
+
+
+</div> 
+</div>
+
+
+
+<div class="Sreeraj">
+<div class="Dj">
+<br/>
+Electrical Engg. References
+
+<br/><br/>
+<a class="" href="http://examvoice.com/browse/electrical">
+      ExamVoice
+    </a>  | 
+
+
+
+</div>
+</div>
+
+
+
+</div>
+  <small><a style='margin-left:10px;align:right;' href='http://twitter.com/djsreeraj' target='_blank'>Coded by Djsreeraj</a> | <a href='http://www.InfoExpo.in' target='_blank'>InfoExpo</a></small>
+</div>
+</div></form>
+<script type="text/javascript">InfoExpo_inisial('InfoExpo');</script>
+
+    enter code here
